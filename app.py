@@ -106,7 +106,7 @@ def callback():
             content += '最低：%s\n' %(
                 format(float(stock_rt['realtime']['low']), '.1f'))
             content += '成交量：%s\n' %(
-                format(float(stock_rt['realtime']['accumulate_trade_volume']), '.1f'))
+                int(stock_rt['realtime']['accumulate_trade_volume']))
 
             # 印出五日股價
             stock = twstock.Stock(text)
